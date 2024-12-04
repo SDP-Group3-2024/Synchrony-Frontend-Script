@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import useLogUserExit from './useLogUserExit';
+import useLogUserExit from './userLogUserExit';
 
 export default function Home() {
   useLogUserExit();
