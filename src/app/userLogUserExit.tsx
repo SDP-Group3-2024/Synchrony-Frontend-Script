@@ -1,44 +1,43 @@
 import { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-function useLogUserExit() {
+function userLogUserExit() {
   useEffect(() => {
-    let session_id = sessionStorage.getItem("session_id");
-    if (!session_id) {
-      session_id = uuidv4();
-      sessionStorage.setItem("session_id", session_id);
-    }
+    let session_id = sessionStorage.getItem("session_id") || uuidv4();
+    sessionStorage.setItem("session_id", session_id);
 
     const apiEndpoint =
       "https://kyoh9ri6zj.execute-api.us-east-1.amazonaws.com/dev/analytics";
-
-    const sendLogDataToAPI = async (logData: Record<string, any>) => {
-      try {
-        const response = await fetch(apiEndpoint, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(logData),
-        });
-        if (!response.ok) {
-          console.error("Failed to send log data:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error sending log data:", error);
-      }
-    };
+    // let hasLogged = false;
 
     const logExitEvent = () => {
+      // if (hasLogged) return;
+      // hasLogged = true;
+
       const logData = {
-        event_type: "page_exit",
-        session_id: session_id,
-        url: window.location.href,
-        timestamp: new Date().toISOString(),
-        page: window.location.pathname,
+        event: {
+          type: "page_exit",
+          timestamp: new Date().toISOString(),
+        },
+        session: {
+          id: session_id,
+        },
+        page_info: {
+          url: window.location.href,
+          path: window.location.pathname,
+        },
+        metadata: {
+          version: "1.0",
+        },
       };
-      console.log("User exit event:", JSON.stringify(logData));
-      sendLogDataToAPI(logData);
+
+      console.log("User exit event:", JSON.stringify(logData, null, 2));
+
+      fetch(apiEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(logData),
+      }).catch((error) => console.error("Error sending log data:", error));
     };
 
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
@@ -63,4 +62,4 @@ function useLogUserExit() {
   }, []);
 }
 
-export default useLogUserExit;
+export default userLogUserExit;
