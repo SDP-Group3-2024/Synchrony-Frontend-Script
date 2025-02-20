@@ -4,8 +4,6 @@ import Link from "next/link";
 import useLogUserExit from "../userLogUserExit";
 
 export default function Apply() {
-  useLogUserExit();
-
   return (
     <div className="grid grid-rows-[auto_1fr_20px] items-center justify-items-center min-h-screen p-0 pb-20 gap-4 sm:p-0 font-[family-name:var(--font-geist-sans)] bg-gray-100 dark:bg-gray-900">
       <nav className="w-full bg-blue-700 text-white p-4 shadow-md">

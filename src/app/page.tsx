@@ -1,15 +1,17 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import useLogUserExit from "./userLogUserExit";
+import script from "/Users/julian.setiadi/script-ts-proj/script.js";
+import Script from "next/script";
 import syfLogo from "../app/assets/syf_logo.png";
 
 export default function Home() {
-  useLogUserExit();
-
   return (
     <div className="grid grid-rows-[auto_1fr_20px] items-center justify-items-center min-h-screen p-0 pb-20 gap-4 sm:p-0 font-[family-name:var(--font-geist-sans)] bg-gray-100 dark:bg-gray-900">
+      <Script src="http://localhost:8000/script.js" strategy="lazyOnload" />
       <nav className="w-full bg-blue-700 text-white p-4 shadow-md">
         <ul className="flex justify-center gap-8 text-sm sm:text-base">
           <li>

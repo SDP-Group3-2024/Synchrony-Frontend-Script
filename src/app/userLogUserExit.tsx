@@ -8,12 +8,8 @@ function userLogUserExit() {
 
     const apiEndpoint =
       "https://kyoh9ri6zj.execute-api.us-east-1.amazonaws.com/dev/analytics";
-    // let hasLogged = false;
 
     const logExitEvent = () => {
-      // if (hasLogged) return;
-      // hasLogged = true;
-
       const logData = {
         event: {
           type: "page_exit",
