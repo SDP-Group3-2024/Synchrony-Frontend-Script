@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Contact Us",
+  title: "Synchrony Financial - Contact Us",
+  description: "Get in touch with our customer support team",
 };
 
 export default function Contact() {

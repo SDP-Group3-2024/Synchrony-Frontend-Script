@@ -276,4 +276,3 @@
   // Run automatically when script loads
   setupAnalytics();
 })();
-export {};

@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Apply Now for a Credit Card",
+  title: "Synchrony Financial - Apply Now",
+  description: "Apply for a credit card with personalized rewards and benefits",
 };
 export default function Apply() {
   return (

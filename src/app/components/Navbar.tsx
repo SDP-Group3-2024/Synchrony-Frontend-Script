@@ -28,6 +28,22 @@ export default function Navbar() {
           </li>
           <li>
             <Link
+              href="/sample-card"
+              className="text-white hover:text-blue-200 transition-colors"
+            >
+              Our Card
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/sample-account"
+              className="text-white hover:text-blue-200 transition-colors"
+            >
+              Savings Account
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/apply"
               className="text-white hover:text-blue-200 transition-colors"
             >
