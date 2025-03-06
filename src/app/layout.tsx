@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Synchrony Demo",
+  title: "Landing Page",
 };
 
 export default function RootLayout({

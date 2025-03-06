@@ -1,7 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import useLogUserExit from "../userLogUserExit";
+
+export const metadata = {
+  title: "Contact Us",
+};
 
 export default function Contact() {
   return (
