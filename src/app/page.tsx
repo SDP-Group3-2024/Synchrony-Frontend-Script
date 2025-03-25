@@ -1,11 +1,11 @@
-import Link from "next/link";
-import Image from "next/image";
-import syfLogo from "../app/assets/syf_logo.png";
-import Navbar from "./components/Navbar";
+import Link from 'next/link';
+import Image from 'next/image';
+import syfLogo from '../app/assets/syf_logo.png';
+import Navbar from './components/Navbar';
 
 export const metadata = {
-  title: "Synchrony Financial - Home",
-  description: "Discover credit cards and financing options tailored for you",
+  title: 'Synchrony Financial - Home',
+  description: 'Discover credit cards and financing options tailored for you',
 };
 
 export default function Home() {
@@ -19,12 +19,11 @@ export default function Home() {
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 dark:text-white leading-tight mb-6">
-              Financial Solutions{" "}
-              <span className="text-blue-600">Tailored For You</span>
+              Financial Solutions <span className="text-blue-600">Tailored For You</span>
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-              Discover credit cards and financing options that help you achieve
-              your goals with personalized rewards and benefits.
+              Discover credit cards and financing options that help you achieve your goals
+              with personalized rewards and benefits.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -65,27 +64,19 @@ export default function Home() {
                   <div className="text-xs text-gray-500 dark:text-gray-400">
                     CREDIT LIMIT
                   </div>
-                  <div className="font-bold text-blue-900 dark:text-blue-400">
-                    $10,000
-                  </div>
+                  <div className="font-bold text-blue-900 dark:text-blue-400">$10,000</div>
                 </div>
               </div>
               <div className="space-y-6">
                 <div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
-                    CASH BACK
-                  </div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">CASH BACK</div>
                   <div className="font-bold text-blue-900 dark:text-blue-400">
                     5% on Eligible Purchases
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
-                    ANNUAL FEE
-                  </div>
-                  <div className="font-bold text-blue-900 dark:text-blue-400">
-                    $0
-                  </div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">ANNUAL FEE</div>
+                  <div className="font-bold text-blue-900 dark:text-blue-400">$0</div>
                 </div>
                 <div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">
@@ -109,8 +100,8 @@ export default function Home() {
               Why Choose Synchrony
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Experience the benefits of financial solutions designed with your
-              needs in mind.
+              Experience the benefits of financial solutions designed with your needs in
+              mind.
             </p>
           </div>
 
@@ -137,8 +128,7 @@ export default function Home() {
                 Personalized Rewards
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Earn rewards tailored to your spending habits and lifestyle
-                preferences.
+                Earn rewards tailored to your spending habits and lifestyle preferences.
               </p>
             </div>
 
@@ -164,8 +154,8 @@ export default function Home() {
                 Secure Transactions
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Rest easy with advanced security features and fraud protection
-                on all your accounts.
+                Rest easy with advanced security features and fraud protection on all your
+                accounts.
               </p>
             </div>
 
@@ -191,8 +181,8 @@ export default function Home() {
                 Flexible Options
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Choose from a variety of financing solutions to meet your
-                specific needs and goals.
+                Choose from a variety of financing solutions to meet your specific needs and
+                goals.
               </p>
             </div>
           </div>
@@ -202,16 +192,17 @@ export default function Home() {
       {/* CTA section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Get Started?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-blue-100 max-w-2xl mx-auto mb-10">
-            Apply today and enjoy the benefits of a credit solution designed
-            with your financial success in mind.
+            Apply today and enjoy the benefits of a credit solution designed with your
+            financial success in mind.
           </p>
           <Link
             href="/apply"
             className="px-8 py-3 bg-white text-blue-700 rounded-full font-semibold hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-block"
+            data-analytics-id="apply-now-button"
+            data-analytics-event="apply-now-click"
+            data-analytics-type="apply-now-button"
           >
             Apply Now
           </Link>
@@ -231,8 +222,8 @@ export default function Home() {
                 width={130}
               />
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-                Financial services tailored to your needs with a focus on
-                security and customer satisfaction.
+                Financial services tailored to your needs with a focus on security and
+                customer satisfaction.
               </p>
             </div>
 
@@ -269,9 +260,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-white mb-4">
-                Legal
-              </h4>
+              <h4 className="font-semibold text-blue-900 dark:text-white mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
@@ -301,9 +290,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-white mb-4">
-                Contact
-              </h4>
+              <h4 className="font-semibold text-blue-900 dark:text-white mb-4">Contact</h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center text-gray-600 dark:text-gray-400">
                   <svg
@@ -349,10 +336,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8 text-center text-sm text-gray-600 dark:text-gray-400">
-            <p>
-              © {new Date().getFullYear()} Synchrony Financial. All rights
-              reserved.
-            </p>
+            <p>© {new Date().getFullYear()} Synchrony Financial. All rights reserved.</p>
           </div>
         </div>
       </footer>
