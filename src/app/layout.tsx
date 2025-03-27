@@ -15,7 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Synchrony Demo",
+  title: "Synchrony Financial",
+  description: "Financial solutions tailored for your needs with personalized rewards and benefits.",
 };
 
 export default function RootLayout({

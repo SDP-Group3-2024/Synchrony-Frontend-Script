@@ -1,25 +1,35 @@
-"use client";
+import Link from 'next/link';
 
-import Link from "next/link";
-import useLogUserExit from "../userLogUserExit";
-
+export const metadata = {
+  title: 'Synchrony Financial - Apply Now',
+  description: 'Apply for a credit card with personalized rewards and benefits',
+};
 export default function Apply() {
   return (
     <div className="grid grid-rows-[auto_1fr_20px] items-center justify-items-center min-h-screen p-0 pb-20 gap-4 sm:p-0 font-[family-name:var(--font-geist-sans)] bg-gray-100 dark:bg-gray-900">
       <nav className="w-full bg-blue-700 text-white p-4 shadow-md">
         <ul className="flex justify-center gap-8 text-sm sm:text-base">
           <li>
-            <Link href="/" className="hover:underline">
+            <Link
+              href="/"
+              className="hover:underline"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/apply" className="hover:underline">
+            <Link
+              href="/apply"
+              className="hover:underline"
+            >
               Apply Now for a Credit Card
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:underline">
+            <Link
+              href="/contact"
+              className="hover:underline"
+            >
               Contact Us
             </Link>
           </li>
@@ -81,22 +91,37 @@ export default function Apply() {
           <fieldset className="flex flex-col gap-2">
             <legend className="text-sm font-medium">Card Preferences</legend>
             <label className="flex items-center gap-2">
-              <input type="checkbox" name="preference" value="rewards" />{" "}
+              <input
+                type="checkbox"
+                name="preference"
+                value="rewards"
+              />{' '}
               Rewards Card
             </label>
             <label className="flex items-center gap-2">
-              <input type="checkbox" name="preference" value="cashback" />{" "}
+              <input
+                type="checkbox"
+                name="preference"
+                value="cashback"
+              />{' '}
               Cashback Card
             </label>
             <label className="flex items-center gap-2">
-              <input type="checkbox" name="preference" value="travel" /> Travel
-              Card
+              <input
+                type="checkbox"
+                name="preference"
+                value="travel"
+              />{' '}
+              Travel Card
             </label>
           </fieldset>
 
           <button
             type="submit"
             className="bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors"
+            data-analytics-id="apply-final-button"
+            data-analytics-action="apply-final-click"
+            data-analytics-category="apply-button"
           >
             Submit Application
           </button>
@@ -107,7 +132,7 @@ export default function Apply() {
         id="contact"
         className="text-center text-sm text-gray-600 dark:text-gray-400 p-4"
       >
-        Contact us at{" "}
+        Contact us at{' '}
         <a
           href="mailto:support@syf.com"
           className="text-blue-600 hover:underline"

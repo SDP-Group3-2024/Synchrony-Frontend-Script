@@ -1,7 +1,9 @@
-"use client";
-
 import Link from "next/link";
-import useLogUserExit from "../userLogUserExit";
+
+export const metadata = {
+  title: "Synchrony Financial - Contact Us",
+  description: "Get in touch with our customer support team",
+};
 
 export default function Contact() {
   return (
